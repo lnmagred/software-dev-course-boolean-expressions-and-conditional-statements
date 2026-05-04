@@ -33,8 +33,7 @@ console.log("You see two paths: one leads to the mountains, the other to the vil
 const choice = readline.question("Do you go to the 'mountains' or the 'village'?");
 
 if (choice === "mountains" && hasTorch) {
-  console.log("You safely navigate through the dark mountains.");   // original line stays
-  // then new code added below
+  console.log("You safely navigate through the dark mountains.");
   const hasSword = false;
   const hasCompass = true;
   const action = readline.question("A giant appears! Do you 'fight' or 'run'? ");
@@ -46,8 +45,7 @@ if (choice === "mountains" && hasTorch) {
     console.log("You run away safely.");
   }
 } else if (choice === "mountains" && !hasTorch) {
-  console.log("It's too dark to proceed. You decide to turn back."); // original line stays
-  // new code added below
+  console.log("It's too dark to proceed. You decide to turn back.");
   const hasCompass = true;
   if (!hasTorch && hasCompass) {
     console.log("But your compass reveals a hidden path. You survive!");
@@ -55,8 +53,7 @@ if (choice === "mountains" && hasTorch) {
     console.log("You get lost forever.");
   }
 } else if (choice === "village" || hasMap) {
-  console.log("You find your way to the village."); // original line stays
-  // new code added below
+  console.log("You find your way to the village.");
   const hasSword = true;
   const shop = readline.question("Go to 'tavern' or 'smith'? ");
   if (shop === "smith" && hasSword) {
@@ -67,8 +64,7 @@ if (choice === "mountains" && hasTorch) {
     console.log("You wander off.");
   }
 } else {
-  console.log("You get lost and wander aimlessly."); // original line stays
-  // new code added below
+  console.log("You get lost and wander aimlessly.");
   const hasCompass = false;
   if (!hasTorch && !hasCompass && !hasMap) {
     console.log("With no items, you never find your way back. Game over.");
